@@ -1,13 +1,44 @@
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.header {
+    margin-bottom: 50px;
+    padding-bottom:50px;
+}
+
+.header #name{
+    font-size: larger;
+    font-weight: 100;
+    float:left;
+    padding: 20px;
+    
+}
+
+.header .links {
+    float: right;
+    margin-bottom: 50px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.header .links li {
+    float:right;
+}
+
+.header .links li a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+
 #Iconrow {
-    float: center;
-    height: 50px;
+    height: 68px;
     margin: 20px;
     margin-bottom: 20px;
-
-
-    
-    
-
 }
 
 #Iconrow img {
@@ -19,3 +50,4 @@
     margin-bottom:20px;
 
 }
+
