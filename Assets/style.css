@@ -1,0 +1,21 @@
+#Iconrow {
+    float: center;
+    height: 50px;
+    margin: 20px;
+    margin-bottom: 20px;
+
+
+    
+    
+
+}
+
+#Iconrow img {
+    max-height: 100%;
+    max-width: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top:20px;
+    margin-bottom:20px;
+
+}
