@@ -8,6 +8,7 @@
 }
 
 .header #name{
+    display: block;
     font-size: larger;
     font-weight: 100;
     float:left;
@@ -25,17 +26,25 @@
 }
 .header .links li {
     float:right;
+    padding-left: 16px;
 }
 
 .header .links li a {
-    display: block;
+    display: inline-block;
     text-align: center;
     padding: 16px;
     text-decoration: none;
 }
 
+.aboutmesection {
+    padding-bottom: 20px;
+}
+
 
 #Iconrow {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
     height: 68px;
     margin: 20px;
     margin-bottom: 20px;
@@ -44,10 +53,11 @@
 #Iconrow img {
     max-height: 100%;
     max-width: auto;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top:20px;
-    margin-bottom:20px;
-
+    justify-content:space-evenly;
 }
 
+.footerinfobanner {
+    display: flex;
+    justify-content: space-evenly;
+
+}
