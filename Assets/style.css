@@ -1,6 +1,9 @@
 * {
     font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #cfdb9b;
 }
+
+
 
 header {
     display: flex;
@@ -14,13 +17,26 @@ header {
     header {
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
 }
 
 header #name{
-    padding: 20px;
+    display: flex;
+    background-color: yellowgreen;
+    width: 400px;
+    text-align: center;
+    text-indent: 25px;
+    align-items: flex-end;
     
 }
+
+@media screen and (max-width:600px) {
+    header #name {
+        justify-content: space-evenly;
+    }
+}
+
 
 header img {
     height: 150px;
@@ -31,28 +47,35 @@ header img {
 }
 
 header ul {
-    list-style-type: none;
     display: flex;
+    flex-direction: row;
+    width: 400px;
+    list-style-type: none;
+    background-color: yellowgreen;
+    justify-content: flex-end;
     align-items: flex-end;
+    font-weight: bold;
+}
+
+header ul li {
+    background-color: yellowgreen;
+    text-indent: 25px;
 }
 
 @media screen and (max-width:600px) {
     header ul{
         flex-direction: column;
         align-items: center;
+        justify-content: space-evenly;
     }
 }
-
-header ul li a {
-    text-decoration: none;
-    padding-left: 30px;
-}
-
 @media screen and (max-width:600px) {
-    header ul li a {
-        padding-left: 0%;
+    header ul li{
+        text-indent:0%;
     }
 }
+
+
 
 
 
@@ -99,6 +122,9 @@ header ul li a {
     max-width: auto;
     justify-content:space-evenly;
 }
+#icaclogo {
+    border-radius: 50%;
+}
 
 #workexamplesheader {
     display: flex;
@@ -109,36 +135,43 @@ header ul li a {
     display: flex;
     margin:auto;
     max-width: 95%;
-    border: #000000;
-    border-style: dashed;
+    border: yellowgreen;
+    border-style:solid;
     margin-bottom: 50px;
     justify-content: center;
 }
 
 .projects2-4grid {
     display: grid;
+    width: 95%;
     grid-template-columns: 33% 33% 33%;
+    margin:auto;
+    column-gap: 15px;
+    justify-content: center;
 
 }
 
 #project2 {
-    border: #000000;
-    border-style: dashed;
+    border: yellowgreen;
+    border-style:solid;
 }
 #project3 {
-    border: #000000;
-    border-style: dashed;
+    border: yellowgreen;
+    border-style:solid;
 }
 #project4 {
-    border: #000000;
-    border-style: dashed;
+    border: yellowgreen;
+    border-style:solid;
 }
 
 .footerinfobanner {
     display: flex;
     justify-content: space-evenly;
     background-color: yellowgreen;
+}
 
+footer ul li {
+    background-color: yellowgreen;
 }
 @media screen and (max-width:600px) {
     .footerinfobanner {
