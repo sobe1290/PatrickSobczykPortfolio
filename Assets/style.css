@@ -1,13 +1,55 @@
-* {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+html {
     background-color: #cfdb9b;
 }
 
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 15px;
+}
 
+h1 {
+    display: block;
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
 
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+  }
+
+  h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+  }
+
+  h4 {
+    display: block;
+    font-size: 1em;
+    margin-top: 1.33em;
+    margin-bottom: 1.33em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+  }
 header {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: nowrap;
     margin-bottom: 50px;
     background-color: yellowgreen;
     justify-content: space-between;
@@ -24,7 +66,6 @@ header {
 header #name{
     display: flex;
     background-color: yellowgreen;
-    width: 400px;
     text-align: center;
     text-indent: 25px;
     align-items: flex-end;
@@ -49,7 +90,6 @@ header img {
 header ul {
     display: flex;
     flex-direction: row;
-    width: 400px;
     list-style-type: none;
     background-color: yellowgreen;
     justify-content: flex-end;
@@ -67,11 +107,14 @@ header ul li {
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
+        margin-top: 20px;
+        margin-bottom: 15px;
     }
 }
 @media screen and (max-width:600px) {
     header ul li{
         text-indent:0%;
+        padding: 15px;
     }
 }
 
@@ -90,7 +133,18 @@ header ul li {
 #aboutmetitle {
     display: flex;
     justify-content: center;
+    margin: 25px;
 }
+
+#Iconrowheader {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width:600px) {
+    #Iconrowheader {display:none}
+}
+
 
 #Iconrow {
     display: flex;
@@ -98,6 +152,7 @@ header ul li {
     justify-content: space-evenly;
     height: 68px;
     margin-bottom: 20px;
+    margin-top: 20px;
     padding-left: 0px;
 }
 
@@ -110,6 +165,13 @@ header ul li {
 
     }
 }
+
+#Iconrow img {
+    max-height: 100%;
+    max-width: auto;
+    justify-content:space-evenly;
+}
+
 @media screen and (max-width:600px) {   
     #Iconrow img{
         max-height: 68px;
@@ -117,13 +179,21 @@ header ul li {
         justify-content:space-evenly;
     }
 }
-#Iconrow img {
-    max-height: 100%;
-    max-width: auto;
-    justify-content:space-evenly;
-}
+
 #icaclogo {
     border-radius: 50%;
+}
+
+#Iconrow img:hover, #Iconrow img:focus, #Iconrow:active {
+    -webkit-transform: scale(3.0);
+    transform: scale(3.0)
+}
+
+@media screen and (max-width:600px) {
+    #Iconrow img:hover, #Iconrow img:focus, #Iconrow:active {
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0)
+    }
 }
 
 #workexamplesheader {
@@ -135,10 +205,49 @@ header ul li {
     display: flex;
     margin:auto;
     max-width: 95%;
+    height: 150px;
     border: yellowgreen;
     border-style:solid;
     margin-bottom: 50px;
     justify-content: center;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  
+}
+
+#project1:before {
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+    content: '';
+    top: 100%;
+    left: 5%;
+    height: 10px;
+    width: 90%;
+    opacity: 0;
+    background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform, opacity;
+    transition-property: transform, opacity;
+}
+
+#project1:hover, #prjoect1:focus, #project1:active {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+}
+
+#project1:hover:before, #project1:focus:before, #project1:active:before {
+    opacity: 1;
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
 }
 
 .projects2-4grid {
@@ -154,20 +263,155 @@ header ul li {
 #project2 {
     border: yellowgreen;
     border-style:solid;
+    border: yellowgreen;
+    border-style:solid;
+    margin-bottom: 50px;
+    justify-content: center;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  
 }
+
+#project2:before {
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+    content: '';
+    top: 100%;
+    left: 5%;
+    height: 10px;
+    width: 90%;
+    opacity: 0;
+    background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform, opacity;
+    transition-property: transform, opacity;
+}
+
+#project2:hover, #prjoect2:focus, #project2:active {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+}
+
+#project2:hover:before, #project2:focus:before, #project2:active:before {
+    opacity: 1;
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+}
+
 #project3 {
     border: yellowgreen;
     border-style:solid;
+    border: yellowgreen;
+    border-style:solid;
+    margin-bottom: 50px;
+    justify-content: center;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  
 }
+
+#project3:before {
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+    content: '';
+    top: 100%;
+    left: 5%;
+    height: 10px;
+    width: 90%;
+    opacity: 0;
+    background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform, opacity;
+    transition-property: transform, opacity;
+}
+
+#project3:hover, #prjoect3:focus, #project3:active {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+}
+
+#project3:hover:before, #project3:focus:before, #project3:active:before {
+    opacity: 1;
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+}
+
 #project4 {
     border: yellowgreen;
     border-style:solid;
+    border: yellowgreen;
+    border-style:solid;
+    margin-bottom: 50px;
+    justify-content: center;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  
+}
+
+#project4:before {
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+    content: '';
+    top: 100%;
+    left: 5%;
+    height: 10px;
+    width: 90%;
+    opacity: 0;
+    background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform, opacity;
+    transition-property: transform, opacity;
+}
+
+#project4:hover, #prjoect4:focus, #project4:active {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+}
+
+#project4:hover:before, #project4:focus:before, #project4:active:before {
+    opacity: 1;
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+}
+
+#contactmeheader {
+    display: flex;
+    justify-content: center;
 }
 
 .footerinfobanner {
     display: flex;
     justify-content: space-evenly;
     background-color: yellowgreen;
+    align-items: center;
+    height: 45px;
 }
 
 footer ul li {
@@ -178,5 +422,18 @@ footer ul li {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        height: auto;
     }
 }
+
+@media screen and (max-width:600px) {
+    footer ul {
+        padding: 15px;
+    }
+    }
+
+@media screen and (max-width:600px) {
+    footer ul li{
+        padding: 15px;
+    }
+    }
