@@ -87,40 +87,22 @@ header img {
     filter: drop-shadow(0 0 8px #000000)
 }
 
-header ul {
+nav {
+    display: flex;
+    align-items: flex-end;
+}
+nav ul {
     display: flex;
     flex-direction: row;
     list-style-type: none;
     background-color: yellowgreen;
     justify-content: flex-end;
-    align-items: flex-end;
     font-weight: bold;
 }
 
-header ul li {
-    background-color: yellowgreen;
-    text-indent: 25px;
+nav ul li {
+    padding-left: 15px;
 }
-
-@media screen and (max-width:600px) {
-    header ul{
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        margin-top: 20px;
-        margin-bottom: 15px;
-    }
-}
-@media screen and (max-width:600px) {
-    header ul li{
-        text-indent:0%;
-        padding: 15px;
-    }
-}
-
-
-
-
 
 .aboutmesection {
     padding-bottom: 20px;
@@ -203,6 +185,8 @@ header ul li {
 
 #project1 {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     margin:auto;
     max-width: 95%;
     height: 150px;
@@ -261,6 +245,8 @@ header ul li {
 }
 
 #project2 {
+    flex-direction: column;
+    align-items: center;
     border: yellowgreen;
     border-style:solid;
     border: yellowgreen;
@@ -308,6 +294,8 @@ header ul li {
 }
 
 #project3 {
+    flex-direction: column;
+    align-items: center;
     border: yellowgreen;
     border-style:solid;
     border: yellowgreen;
@@ -355,6 +343,8 @@ header ul li {
 }
 
 #project4 {
+    flex-direction: column;
+    align-items: center;
     border: yellowgreen;
     border-style:solid;
     border: yellowgreen;
