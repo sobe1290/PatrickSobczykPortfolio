@@ -1,3 +1,4 @@
+/* This section controls global style settings */
 html {
     background-color: #cfdb9b;
 }
@@ -6,6 +7,8 @@ html {
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 15px;
 }
+
+/* This section controls global heading style settings */
 
 h1 {
     display: block;
@@ -25,9 +28,9 @@ h2 {
     margin-left: 0;
     margin-right: 0;
     font-weight: bold;
-  }
+}
 
-  h3 {
+h3 {
     display: block;
     font-size: 1.17em;
     margin-top: 1em;
@@ -35,9 +38,9 @@ h2 {
     margin-left: 0;
     margin-right: 0;
     font-weight: bold;
-  }
+}
 
-  h4 {
+h4 {
     display: block;
     font-size: 1em;
     margin-top: 1.33em;
@@ -45,7 +48,10 @@ h2 {
     margin-left: 0;
     margin-right: 0;
     font-weight: bold;
-  }
+}
+
+/* This section controls header style settings */
+
 header {
     display: flex;
     flex-direction: row;
@@ -87,10 +93,13 @@ header img {
     filter: drop-shadow(0 0 8px #000000)
 }
 
+/* This section controls the navigation bar in the header style settings */
+
 nav {
     display: flex;
     align-items: flex-end;
 }
+
 nav ul {
     display: flex;
     flex-direction: row;
@@ -103,6 +112,8 @@ nav ul {
 nav ul li {
     padding-left: 15px;
 }
+
+/* This section controls the about me section style settings */
 
 .aboutmesection {
     padding-bottom: 20px;
@@ -118,6 +129,8 @@ nav ul li {
     margin: 25px;
 }
 
+/* This section controls the icon row style settings */
+
 #Iconrowheader {
     display: flex;
     justify-content: center;
@@ -126,7 +139,6 @@ nav ul li {
 @media screen and (max-width:600px) {
     #Iconrowheader {display:none}
 }
-
 
 #Iconrow {
     display: flex;
@@ -182,6 +194,8 @@ nav ul li {
     }
 }
 
+/* This section controls project boxes style settings */
+
 #workexamplesheader {
     display: flex;
     justify-content: center;
@@ -192,15 +206,15 @@ a:link {
 }
 
 a:visited {
-text-decoration: none;
+    text-decoration: none;
 }
 
 a:hover {
-text-decoration: underline;
+    text-decoration: underline;
 }
 
 a:active {
-text-decoration: underline;
+    text-decoration: underline;
 }
 
 #project1 {
@@ -218,6 +232,7 @@ text-decoration: underline;
     color: black;
     background-color: rgba(226, 233, 214, 0.945);
 }
+
 #project1:hover {
     opacity: 0.5;
 }
@@ -228,7 +243,6 @@ text-decoration: underline;
     margin:auto;
     column-gap: 15px;
     justify-content: center;
-
 }
 
 #project2 {
@@ -244,11 +258,10 @@ text-decoration: underline;
     color: black;
     background-color: rgba(226, 233, 214, 0.945);
 }
+
 #project2:hover {
     opacity: 0.5;
 }
-
-
 
 #project3 {
     display: flex;
@@ -286,6 +299,8 @@ text-decoration: underline;
     opacity: 0.5;
 }
 
+/* This section controls the footer and contact me style settings */
+
 #contactmeheader {
     display: flex;
     justify-content: center;
@@ -301,7 +316,10 @@ text-decoration: underline;
 
 footer ul li {
     background-color: yellowgreen;
+    text-decoration: none;
+    color: black;
 }
+
 @media screen and (max-width:600px) {
     .footerinfobanner {
         flex-direction: column;
@@ -315,10 +333,10 @@ footer ul li {
     footer ul {
         padding: 15px;
     }
-    }
+}
 
 @media screen and (max-width:600px) {
     footer ul li{
         padding: 15px;
     }
-    }
+}
